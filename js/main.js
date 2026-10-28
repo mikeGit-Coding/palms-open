@@ -24,6 +24,7 @@
       duration: "2:14",
       date: "Nov 2026",
       tag: "Trailer",
+      thumb: "assets/ep0_baptism.jpg",
       hook: "Ninety seconds on what the show is, who it is for, and why opening your palms means you finally stop gripping the pain.",
       guest: "Solo Introduction with Melissa Muench",
       audioTitle: "Trailer: Why I Opened My Palms"
@@ -37,6 +38,7 @@
       duration: "42 Min",
       date: "Dec 15, 2026",
       tag: "Dec 15 Premiere",
+      thumb: "assets/ep1_prayer.jpg",
       hook: "Guilt versus real regret, the 'good enough parent' research, and why working long hours is modeling resilience, not absence.",
       guest: "Solo Episode + Guided 5-Minute Reflection",
       audioTitle: "Ep 01: Shedding Mom Guilt"
@@ -50,8 +52,9 @@
       duration: "48 Min",
       date: "Dec 15, 2026",
       tag: "Dec 15 Premiere",
+      thumb: "assets/ep2_sharon_lechter.jpg",
       hook: "Sinking funds for predictable surprises, where hidden savings hide, and building your first $500 starter emergency fund.",
-      guest: "Nonprofit Credit Counselor (+ Free Budget Sheet)",
+      guest: "Sharon Lechter & Nonprofit Credit Counselors",
       audioTitle: "Ep 02: Budgeting on One Income"
     },
     {
@@ -63,6 +66,7 @@
       duration: "45 Min",
       date: "Dec 15, 2026",
       tag: "Dec 15 Premiere",
+      thumb: "assets/ep3_christmas.jpg",
       hook: "Surrounded by your kids and still completely alone. Practical connection micro-habits and building a trusted village from scratch.",
       guest: "Licensed Clinical Therapist + Mom of Three",
       audioTitle: "Ep 03: Fighting Loneliness"
@@ -332,6 +336,12 @@
 
     audioPlayerTitle.textContent = track.audioTitle || track.title;
     audioPlayerArtist.textContent = `${track.guest} • Palms Open`;
+    
+    const audioThumb = document.getElementById("audio-thumb");
+    if (audioThumb) {
+      audioThumb.src = track.thumb || "assets/cover.jpg";
+      audioThumb.alt = track.title || "Palms Open Artwork";
+    }
     
     // Duration calculation for current track
     if (track.id === 0) {
