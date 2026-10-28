@@ -753,11 +753,48 @@
   }
 
   // ==========================================================================
-  // 8. INITIALIZATION
+  // 8. SCROLL-SPY ACTIVE NAV HIGHLIGHT
+  // ==========================================================================
+  function initScrollSpy() {
+    const navLinks = document.querySelectorAll(".desktop-nav .nav-link");
+    const sections = Array.from(navLinks).map(link => {
+      const id = link.getAttribute("href")?.replace("#", "");
+      return id ? document.getElementById(id) : null;
+    }).filter(Boolean);
+
+    function onScroll() {
+      const scrollPos = window.scrollY + 140;
+      let currentSectionId = null;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const sec = sections[i];
+        if (sec && sec.offsetTop <= scrollPos) {
+          currentSectionId = sec.getAttribute("id");
+          break;
+        }
+      }
+
+      navLinks.forEach(link => {
+        const targetId = link.getAttribute("href")?.replace("#", "");
+        if (targetId && targetId === currentSectionId) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  // ==========================================================================
+  // 9. INITIALIZATION
   // ==========================================================================
   document.addEventListener("DOMContentLoaded", () => {
     bindEventListeners();
     updateAudioBarUI();
+    initScrollSpy();
     console.log("🎙️ Palms Open Podcast interactive engine initialized successfully.");
   });
 
