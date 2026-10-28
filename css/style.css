@@ -136,12 +136,27 @@ button {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 15px rgba(42, 213, 197, 0.2);
+  flex-shrink: 0;
+  transition: transform var(--transition-bounce), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.brand-link:hover .brand-logo-icon {
+  transform: scale(1.06);
+  border-color: var(--accent-turquoise);
+  box-shadow: 0 0 20px rgba(42, 213, 197, 0.45);
 }
 
 .brand-logo-icon svg {
-  width: 24px;
-  height: 24px;
-  stroke: var(--accent-turquoise);
+  width: 26px;
+  height: 26px;
+  fill: var(--accent-turquoise);
+  stroke: none;
+  transition: transform var(--transition-bounce), filter var(--transition-base);
+}
+
+.brand-link:hover .brand-logo-icon svg {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 8px rgba(42, 213, 197, 0.8));
 }
 
 .brand-text {
