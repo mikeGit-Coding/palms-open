@@ -38,7 +38,7 @@
       duration: "42 Min",
       date: "Dec 15, 2026",
       tag: "Dec 15 Premiere",
-      thumb: "assets/ep1_prayer.jpg",
+      thumb: "assets/ep1_christmas.jpg",
       hook: "Guilt versus real regret, the 'good enough parent' research, and why working long hours is modeling resilience, not absence.",
       guest: "Solo Episode + Guided 5-Minute Reflection",
       audioTitle: "Ep 01: Shedding Mom Guilt"
@@ -66,7 +66,7 @@
       duration: "45 Min",
       date: "Dec 15, 2026",
       tag: "Dec 15 Premiere",
-      thumb: "assets/ep3_christmas.jpg",
+      thumb: "assets/ep3_prayer.jpg",
       hook: "Surrounded by your kids and still completely alone. Practical connection micro-habits and building a trusted village from scratch.",
       guest: "Licensed Clinical Therapist + Mom of Three",
       audioTitle: "Ep 03: Fighting Loneliness"
