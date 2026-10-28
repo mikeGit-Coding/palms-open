@@ -724,13 +724,17 @@
       }
     }
 
-    // Restore saved theme preference
+    // Restore saved theme preference (default to Obsidian Black)
     try {
       const savedTheme = localStorage.getItem("palms_theme");
-      if (savedTheme === "obsidian") {
+      if (savedTheme === "palm") {
+        applyTheme("palm");
+      } else {
         applyTheme("obsidian");
       }
-    } catch(e){}
+    } catch(e) {
+      applyTheme("obsidian");
+    }
 
     function handleThemeToggle() {
       const isCurrentlyObsidian = document.body.classList.contains("theme-obsidian");
