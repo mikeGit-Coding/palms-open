@@ -80,6 +80,7 @@
       duration: "41 Min",
       date: "Dec 22, 2026",
       tag: "Tuesday Release",
+      thumb: "assets/ep4_redefining_family.jpg",
       hook: "Your family isn’t broken—it just isn’t what television sold you. How children define home, and answering intrusive questions with calm.",
       guest: "Family Systems Therapist + Listener Stories",
       audioTitle: "Ep 04: Redefining Family"

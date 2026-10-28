@@ -515,9 +515,18 @@
 
           <!-- Episode 04 -->
           <article class="episode-card" data-pillar="1" data-ep-id="4">
-            <div class="card-top-banner">
-              <span class="ep-badge">Ep 04</span>
-              <span class="premiere-tag">Tuesday Release</span>
+            <div class="card-thumb-wrapper">
+              <img src="assets/ep4_redefining_family.jpg" alt="Episode 04: Redefining Family - Melissa Muench & Her Mother" class="card-thumb-img" loading="lazy" style="object-position: center 25%;">
+              <div class="card-thumb-overlay"></div>
+              <div class="card-thumb-header">
+                <span class="ep-badge">Ep 04</span>
+                <span class="premiere-tag">Tuesday Release</span>
+              </div>
+              <button class="card-thumb-play-overlay play-track-btn" data-track="4" aria-label="Play Episode 04">
+                <span class="thumb-play-circle">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                </span>
+              </button>
             </div>
             <div class="card-body">
               <span class="card-pillar-tag">
@@ -536,7 +545,7 @@
               <span class="ep-date">Dec 22, 2026 • 41 Min</span>
               <button class="listen-chip-btn play-track-btn" data-track="4">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                <span>Details &amp; Notes</span>
+                <span>Listen Audio</span>
               </button>
             </div>
           </article>
@@ -861,9 +870,19 @@
         <div class="host-grid">
           
           <div class="host-gallery-box">
+            <!-- Maternal Roots Badge (Top Left) -->
+            <div class="host-photo-badge badge-mom" title="Melissa and her mother">
+              <img src="assets/melissa_mom.jpg" alt="Melissa Muench with her mother">
+              <span class="badge-label">My Foundation</span>
+            </div>
+
+            <!-- Main Host Portrait -->
             <img src="assets/melissa_portrait.jpg" alt="Melissa Muench portrait" class="main-host-photo">
-            <div class="secondary-photo-badge">
-              <img src="assets/melissa_son.jpg" alt="Melissa with her son">
+
+            <!-- Next Generation Badge (Bottom Right) -->
+            <div class="host-photo-badge badge-son" title="Melissa with her son">
+              <img src="assets/melissa_son.jpg" alt="Melissa Muench with her son">
+              <span class="badge-label">My Purpose</span>
             </div>
           </div>
 
